@@ -21,6 +21,8 @@ class RegisterController extends Controller
                 'confirmed',
                 'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z\d])\S{6,}$/'
                 ]
+        ], [
+            'passwrd.regex'=>'The password must contain at least one lowercase letter, one uppercase letter, and one symbol.'
         ]);
 
         // Check if the password matches the confirmation
