@@ -36,10 +36,16 @@ class RegisterController extends Controller
         }
 
         // Registration successful, display user info
-        return view('userinfo', [
-            'login'=>$request->login,
-            'email'=>$request->email,
-            'age'=>$request->age
-        ]);
+        // return view('userinfo', [
+        //     'login'=>$request->login,
+        //     'email'=>$request->email,
+        //     'age'=>$request->age
+        // ]);
+
+        return view('userinfo')
+        ->with('title', 'User info')
+        ->with('login', $request->login)
+        ->with('email', $request->email)
+        ->with('age', $request->age);
     }
 }
